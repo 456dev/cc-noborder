@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.the456gamer.ccnoborder.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "ccnoborder.refmap.json",
+  "mixins": [
+    "DirectMixin",
+    "Mixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
