@@ -12,22 +12,42 @@ public class Mixin {
 
   private static final Palette overridePalette = new CustomPalette();
 
-  @ModifyArg(method = "drawTerminalBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/Terminal;FFFF)V", at = @At(value = "INVOKE", target = "Ldan200/computercraft/client/render/text/FixedWidthFontRenderer;drawBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/TextBuffer;Ldan200/computercraft/shared/util/Palette;FFFI)V", ordinal = 0), index = 4, remap = false)
+  @ModifyArg(method = "drawTerminalBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/Terminal;FFFF)V",
+      at = @At(value = "INVOKE",
+          target = "Ldan200/computercraft/client/render/text/FixedWidthFontRenderer;drawBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/TextBuffer;Ldan200/computercraft/shared/util/Palette;FFFI)V",
+          ordinal = 0),
+      index = 4,
+      remap = false)
   private static Palette injectedTop(Palette x) {
     return overridePalette;
   }
 
-  @ModifyArg(method = "drawTerminalBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/Terminal;FFFF)V", at = @At(value = "INVOKE", target = "Ldan200/computercraft/client/render/text/FixedWidthFontRenderer;drawBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/TextBuffer;Ldan200/computercraft/shared/util/Palette;FFFI)V", ordinal = 1), index = 4, remap = false)
+  @ModifyArg(method = "drawTerminalBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/Terminal;FFFF)V",
+      at = @At(value = "INVOKE",
+          target = "Ldan200/computercraft/client/render/text/FixedWidthFontRenderer;drawBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/TextBuffer;Ldan200/computercraft/shared/util/Palette;FFFI)V",
+          ordinal = 1),
+      index = 4,
+      remap = false)
   private static Palette injectedBottom(Palette x) {
     return overridePalette;
   }
 
-  @ModifyArg(method = "drawBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/TextBuffer;Ldan200/computercraft/shared/util/Palette;FFFI)V", at = @At(value = "INVOKE", target = "Ldan200/computercraft/client/render/text/FixedWidthFontRenderer;drawQuad(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFFFLdan200/computercraft/shared/util/Palette;CI)V", ordinal = 0), index = 5, remap = false)
+  @ModifyArg(method = "drawBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/TextBuffer;Ldan200/computercraft/shared/util/Palette;FFFI)V",
+      at = @At(value = "INVOKE",
+          target = "Ldan200/computercraft/client/render/text/FixedWidthFontRenderer;drawQuad(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFFFLdan200/computercraft/shared/util/Palette;CI)V",
+          ordinal = 0),
+      index = 5,
+      remap = false)
   private static Palette injectedLeft(Palette x) {
     return overridePalette;
   }
 
-  @ModifyArg(method = "drawBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/TextBuffer;Ldan200/computercraft/shared/util/Palette;FFFI)V", at = @At(value = "INVOKE", target = "Ldan200/computercraft/client/render/text/FixedWidthFontRenderer;drawQuad(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFFFLdan200/computercraft/shared/util/Palette;CI)V", ordinal = 1), index = 5, remap = false)
+  @ModifyArg(method = "drawBackground(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFLdan200/computercraft/core/terminal/TextBuffer;Ldan200/computercraft/shared/util/Palette;FFFI)V",
+      at = @At(value = "INVOKE",
+        target = "Ldan200/computercraft/client/render/text/FixedWidthFontRenderer;drawQuad(Ldan200/computercraft/client/render/text/FixedWidthFontRenderer$QuadEmitter;FFFFLdan200/computercraft/shared/util/Palette;CI)V",
+        ordinal = 1),
+      index = 5,
+      remap = false)
   private static Palette injectedRight(Palette x) {
     return overridePalette;
   }
